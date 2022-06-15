@@ -47,7 +47,7 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="intNombre"/>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_2">
@@ -57,13 +57,13 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSpinBox" name="spinBox"/>
+           <widget class="QSpinBox" name="intHoras"/>
           </item>
          </layout>
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox">
+        <widget class="QGroupBox" name="jornadaLista">
          <property name="styleSheet">
           <string notr="true">color: rgb(13, 13, 13);</string>
          </property>
@@ -72,17 +72,20 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QRadioButton" name="radioButton">
+           <widget class="QRadioButton" name="intMatutina">
             <property name="styleSheet">
              <string notr="true">color: rgb(4, 4, 4);</string>
             </property>
             <property name="text">
              <string>Matutina</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="radioButton_2">
+           <widget class="QRadioButton" name="intVespertina">
             <property name="styleSheet">
              <string notr="true">color: rgb(3, 3, 3);</string>
             </property>
@@ -92,7 +95,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="radioButton_3">
+           <widget class="QRadioButton" name="intNocturna">
             <property name="styleSheet">
              <string notr="true">color: rgb(6, 6, 6);</string>
             </property>
@@ -121,7 +124,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="Boton">
             <property name="styleSheet">
              <string notr="true">color: rgb(6, 6, 6);</string>
             </property>
@@ -165,7 +168,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QPlainTextEdit" name="plainTextEdit"/>
+        <widget class="QPlainTextEdit" name="outTexto"/>
        </item>
       </layout>
      </widget>

@@ -15,6 +15,9 @@ public:
     Salarios(QWidget *parent = nullptr);
     ~Salarios();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Salarios *ui;
 };
