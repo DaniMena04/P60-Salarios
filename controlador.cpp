@@ -21,7 +21,7 @@ bool Controlador::calcular()
 
     // Determinar el valor hora
 
-    double valorHora = 0;
+    float valorHora = 0;
     switch (m_modelo->jornada()) {
     case TipodeJornada::Matutina:
         valorHora = MATUTINO;
@@ -44,9 +44,9 @@ bool Controlador::calcular()
     }
 
     // Calcular el salario
-    double salarioBruto = horas * valorHora + (horasExtra * HORA_EXTRA);
-    double descuento = salarioBruto * IESS / 100.0;
-    double salarioNeto = salarioBruto - descuento;
+    float salarioBruto = horas * valorHora + (horasExtra * HORA_EXTRA);
+    float descuento = salarioBruto * IESS / 100.0;
+    float salarioNeto = salarioBruto - descuento;
 
     // Estabklecer valores al objeto
 
