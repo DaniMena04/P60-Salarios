@@ -14,8 +14,20 @@ Salarios::~Salarios()
 }
 
 
-void Salarios::on_pushButton_clicked()
+void Salarios::on_btnCalcular_clicked()
 {
+    // Obrero modelo("Juan",25,TipodeJornada::Matutina);
+
+    // qDebug() << modelo.toString();
+
+    Controlador control;
+    control.setDatos("Juan",25,TipodeJornada::Matutina);
+    if(control.calcular()){
+        qDebug() << control.getDatos();
+    }else{
+        qDebug() << "No se pudo calcular los salarios";
+    }
+
 
 }
 

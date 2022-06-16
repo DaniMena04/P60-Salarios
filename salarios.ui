@@ -124,7 +124,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="Boton">
+           <widget class="QPushButton" name="btnCalcular">
             <property name="styleSheet">
              <string notr="true">color: rgb(6, 6, 6);</string>
             </property>

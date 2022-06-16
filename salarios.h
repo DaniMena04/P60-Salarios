@@ -1,6 +1,10 @@
 #ifndef SALARIOS_H
 #define SALARIOS_H
 
+#include "obrero.h"
+#include "controlador.h"
+
+#include <QDebug>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -16,7 +20,8 @@ public:
     ~Salarios();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_btnCalcular_clicked();
 
 private:
     Ui::Salarios *ui;
