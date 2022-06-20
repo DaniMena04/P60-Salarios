@@ -17,6 +17,31 @@ Salarios::~Salarios()
 
 void Salarios::on_btnCalcular_clicked()
 {
+   calcular();
+}
+
+
+void Salarios::on_actionNuevo_triggered()
+{
+    // Limpiar widgets
+    limpiar();
+    // Limpiar el texto de calculos
+    ui->outTexto->clear();
+    // Mostrar mensaje de estado
+    ui->statusbar->showMessage("Nueva hoja de calculos de salario",3000);
+}
+
+void Salarios::limpiar()
+{
+    // Limpiar widgets
+    ui->intNombre->setText("");
+    ui->intHoras->setValue(0);
+    ui->intMatutina->setChecked(true);
+    ui->intNombre->setFocus();
+}
+
+void Salarios::calcular()
+{
     // Obtener los datos de la GUI
 
     QString nombre = ui->intNombre->text();
@@ -51,13 +76,46 @@ void Salarios::on_btnCalcular_clicked()
     }
 
     // Limpiar widgets
-    ui->intNombre->setText("");
-    ui->intHoras->setValue(0);
-    ui->intMatutina->setChecked(true);
-    ui->intNombre->setFocus();
+    limpiar();
 
     // Mostrar mensaje de estado
-
     ui->statusbar->showMessage("Salario de " + nombre + " calculado",5000);
+}
+
+
+void Salarios::on_actionCalcular_triggered()
+{
+    calcular();
+}
+
+
+void Salarios::on_actionSalir_triggered()
+{
+    this->close();
+}
+
+
+void Salarios::on_actionGuardar_triggered()
+{
+    // Abrir un cuadro de dialogo para seleccionar el path y archivo a guardadr
+    QString nombreArchivo = QFileDialog::getSaveFileName(this,"Guardar Calculos de Salarios",QDir::home().absolutePath() + "/salarios.txt","Archivos de texto (*.txt)");
+
+    // Crear un objeto
+    QFile archivo(nombreArchivo);
+
+    // Tratar de abrir el archivo
+    if(archivo.open(QFile::WriteOnly | QFile::Truncate)){
+        //Crear un objeto "stream" de texto
+        QTextStream salida(&archivo);
+        // Enviar los datos del resultado a la salida
+        salida << ui->outTexto->toPlainText();
+        // Mostrar mensaje en la barra de estados
+        ui->statusbar->showMessage("Datos guardados en: " + nombreArchivo, 5000);
+        // Crear el archivo
+        archivo.close();
+    }else{
+        // Mensaje de error
+        QMessageBox::warning(this,"Guardar archivo","Nose puede acceder al archivo para guardar los datos");
+    }
 }
 

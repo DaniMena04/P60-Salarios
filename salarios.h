@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Salarios; }
@@ -24,8 +25,18 @@ private slots:
 
     void on_btnCalcular_clicked();
 
+    void on_actionNuevo_triggered();
+
+    void on_actionCalcular_triggered();
+
+    void on_actionSalir_triggered();
+
+    void on_actionGuardar_triggered();
+
 private:
     Ui::Salarios *ui;
     Controlador *m_control;
+    void limpiar();
+    void calcular();
 };
 #endif // SALARIOS_H
