@@ -119,3 +119,16 @@ void Salarios::on_actionGuardar_triggered()
     }
 }
 
+
+void Salarios::on_actionAcerca_de_Salarios_triggered()
+{
+    // Crear un objeto del cuadro de dialogo
+    Acerca *dialog = new Acerca(this);
+    // Enviar datos a la otra ventana
+    dialog->setVersion(VERSION);
+    //Mostrar la ventana en modo MODAL
+    dialog->exec();
+    // Luego de cerrar de la ventana, se acceden a los datos de la misma
+    qDebug() << dialog->valor();
+}
+
