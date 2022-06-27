@@ -1,5 +1,11 @@
 <RCC>
     <qresource prefix="/">
-        <file>../../../../../../Users/Usuario/Downloads/Save.png</file>
+        <file>Recursos/Imagenes/Save.png</file>
+        <file>Recursos/Imagenes/abrir-carpeta-con-documento.png</file>
+        <file>Recursos/Imagenes/agregar-archivo.png</file>
+        <file>Recursos/Imagenes/cerrar-sesion.png</file>
+        <file>Recursos/Imagenes/salario.png</file>
+        <file>Recursos/Imagenes/about.png</file>
+        <file>Recursos/Imagenes/calculos.png</file>
     </qresource>
 </RCC>

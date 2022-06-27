@@ -6,78 +6,81 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>334</height>
+    <width>581</width>
+    <height>540</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Acerca de</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>270</y>
-     <width>461</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>30</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Franklin Gothic Heavy</family>
-    </font>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; font-style:italic;&quot;&gt;Salarios&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>60</y>
-     <width>421</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Aplicacion para el calculo salarios semanales de obreros&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Autor&lt;/span&gt;: Daniel Mauricio Mena Estrella &amp;lt;&lt;a href=&quot;mailto:dmenae@est.ups.edu.ec&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;dmenae@est.ups.edu.ec&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Universidad Politecnica Salesiana &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Carrera de computacion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Todos los derechos reservados &lt;span style=&quot; font-weight:700;&quot;&gt;(R) &lt;/span&gt;2022&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="outVersion">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>40</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>v 0.1</string>
-   </property>
-  </widget>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/Imagenes/about.png</normaloff>:/Recursos/Imagenes/about.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="Encabezado" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="Titulo">
+        <property name="font">
+         <font>
+          <family>Franklin Gothic Heavy</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; font-style:italic;&quot;&gt;Salarios&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="outVersion">
+        <property name="text">
+         <string>v 0.1</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="Descripcion">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700; font-style:italic;&quot;&gt;Aplicacion para el calculo salarios semanales de obreros&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Autor&lt;/span&gt;: Daniel Mauricio Mena Estrella &amp;lt;&lt;a href=&quot;mailto:dmenae@est.ups.edu.ec&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;dmenae@est.ups.edu.ec&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Universidad Politecnica Salesiana &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Carrera de computacion&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:700; font-style:italic; text-decoration: underline;&quot;&gt;Imagenes utilizadas fueron sacadas de:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Dinero iconos creados por Freepik - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Save icons created by Yogi Aprelliyanto - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Cerrar sesión iconos creados por Smashicons - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Documento iconos creados por Freepik - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Agregar archivo iconos creados por RIkas Dzihab - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Gastos iconos creados por IconBaandar - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;&amp;lt;a href=&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;About icons created by Ilham Fitrotul Hayat - Flaticon&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;-- Todos los derechos reservados &lt;span style=&quot; font-weight:700;&quot;&gt;(r) &lt;/span&gt;2022 --&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="btnOpciones">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections>
   <connection>
-   <sender>buttonBox</sender>
+   <sender>btnOpciones</sender>
    <signal>accepted()</signal>
    <receiver>Acerca</receiver>
    <slot>accept()</slot>
@@ -93,7 +96,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>buttonBox</sender>
+   <sender>btnOpciones</sender>
    <signal>rejected()</signal>
    <receiver>Acerca</receiver>
    <slot>reject()</slot>

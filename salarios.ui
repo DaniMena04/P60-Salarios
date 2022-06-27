@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>Salarios</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/Imagenes/salario.png</normaloff>:/Recursos/Imagenes/salario.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
@@ -218,6 +222,10 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/Imagenes/agregar-archivo.png</normaloff>:/Recursos/Imagenes/agregar-archivo.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Nuevo</string>
    </property>
@@ -226,6 +234,10 @@
    </property>
   </action>
   <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/Imagenes/abrir-carpeta-con-documento.png</normaloff>:/Recursos/Imagenes/abrir-carpeta-con-documento.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Abrir</string>
    </property>
@@ -236,7 +248,7 @@
   <action name="actionGuardar">
    <property name="icon">
     <iconset resource="Recursos.qrc">
-     <normaloff>:/Users/Usuario/Downloads/Save.png</normaloff>:/Users/Usuario/Downloads/Save.png</iconset>
+     <normaloff>:/Recursos/Imagenes/Save.png</normaloff>:/Recursos/Imagenes/Save.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Guardar</string>
@@ -249,6 +261,10 @@
    </property>
   </action>
   <action name="actionCalcular">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/Imagenes/calculos.png</normaloff>:/Recursos/Imagenes/calculos.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Calcular</string>
    </property>
@@ -257,6 +273,10 @@
    </property>
   </action>
   <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/Imagenes/cerrar-sesion.png</normaloff>:/Recursos/Imagenes/cerrar-sesion.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Salir</string>
    </property>
@@ -265,6 +285,10 @@
    </property>
   </action>
   <action name="actionAcerca_de_Salarios">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/Imagenes/about.png</normaloff>:/Recursos/Imagenes/about.png</iconset>
+   </property>
    <property name="text">
     <string>Acerca de Salarios</string>
    </property>
