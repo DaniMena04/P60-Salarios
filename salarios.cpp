@@ -93,11 +93,21 @@ void Salarios::on_actionSalir_triggered()
 {
     if(ui->outTexto->toPlainText().isEmpty()){
         this->close();
-    }else{
-        QMessageBox::question(this,"Advertencia","Hay informacion que no se guardo","Guardar","No guardar","Cancelar");
-       if()
-//        on_actionGuardar_triggered();
     }
+    QMessageBox::StandardButton reply = QMessageBox::question(this,"Salir","Hay informacion que no se guardo",QMessageBox::Save | QMessageBox::No | QMessageBox::Cancel);
+
+    if(reply == QMessageBox::Save){
+        on_actionGuardar_triggered();
+    }
+
+    if(reply == QMessageBox::Cancel){
+        return;
+    }
+
+    if(reply == QMessageBox::No){
+        QApplication::quit();
+    }
+
 }
 
 

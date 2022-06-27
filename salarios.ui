@@ -40,7 +40,7 @@
         <widget class="QWidget" name="widget_3" native="true">
          <layout class="QFormLayout" name="formLayout">
           <item row="0" column="0">
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="etqNombre">
             <property name="text">
              <string>NOMBRE:</string>
             </property>
@@ -54,7 +54,7 @@
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="etqHoras">
             <property name="text">
              <string>HORAS: </string>
             </property>
@@ -234,11 +234,18 @@
    </property>
   </action>
   <action name="actionGuardar">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Users/Usuario/Downloads/Save.png</normaloff>:/Users/Usuario/Downloads/Save.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Guardar</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+G</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
   <action name="actionCalcular">
@@ -263,6 +270,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
