@@ -17,7 +17,7 @@ Salarios::~Salarios()
 
 void Salarios::on_btnCalcular_clicked()
 {
-   calcular();
+    calcular();
 }
 
 
@@ -91,19 +91,80 @@ void Salarios::on_actionCalcular_triggered()
 
 void Salarios::on_actionSalir_triggered()
 {
-    this->close();
+    if(ui->outTexto->toPlainText().isEmpty()){
+        this->close();
+    }else{
+        QMessageBox::question(this,"Advertencia","Hay informacion que no se guardo","Guardar","No guardar","Cancelar");
+       if()
+//        on_actionGuardar_triggered();
+    }
 }
 
 
 void Salarios::on_actionGuardar_triggered()
 {
-    // Abrir un cuadro de dialogo para seleccionar el path y archivo a guardadr
-    QString nombreArchivo = QFileDialog::getSaveFileName(this,"Guardar Calculos de Salarios",QDir::home().absolutePath() + "/salarios.txt","Archivos de texto (*.txt)");
 
-    // Crear un objeto
+
+    QString nombreArchivo;
+    QFile archivo(nombreArchivo);
+    if(archivo.exists()){
+        archivo.setFileName(nombreArchivo);
+        if(archivo.open(QFile::WriteOnly | QFile::Truncate)){
+
+            QTextStream salida(&archivo);
+            // Enviar los datos del resultado a la salida
+            salida << ui->outTexto->toPlainText();
+            // Mostrar mensaje en la barra de estados
+            ui->statusbar->showMessage("Datos guardados", 5000);
+            // Crear el archivo
+            archivo.close();
+        }
+    }else{
+        guardarComo();
+    }
+
+}
+
+
+
+void Salarios::on_actionAcerca_de_Salarios_triggered()
+{
+    // Crear un objeto del cuadro de dialogo
+    Acerca *dialog = new Acerca(this);
+    // Enviar datos a la otra ventana
+    dialog->setVersion(VERSION);
+    //Mostrar la ventana en modo MODAL
+    dialog->exec();
+    // Luego de cerrar de la ventana, se acceden a los datos de la misma
+    qDebug() << dialog->valor();
+}
+
+
+void Salarios::on_actionAbrir_triggered()
+{
+    QString nombreArchivo = QFileDialog::getOpenFileName(this,"Abrir archivo de calculo de salarios");
     QFile archivo(nombreArchivo);
 
-    // Tratar de abrir el archivo
+    if(!archivo.exists()){
+        return;
+    }
+
+    archivo.open(QIODevice::ReadOnly | QIODevice::Text);
+    if(!archivo.isOpen()){
+        return;
+    }
+
+    QString contenido = archivo.readAll();
+    ui->outTexto->setPlainText(contenido);
+    archivo.close();
+
+}
+
+void Salarios::guardarComo()
+{
+    // Abrir un cuadro de dialogo para seleccionar el path y archivo a guardadr
+    QString nombreArchivo = QFileDialog::getSaveFileName(this,"Guardar Calculos de Salarios",QDir::home().absolutePath() + "/salarios.txt","Archivos de texto (*.txt)");
+    QFile archivo(nombreArchivo);
     if(archivo.open(QFile::WriteOnly | QFile::Truncate)){
         //Crear un objeto "stream" de texto
         QTextStream salida(&archivo);
@@ -117,18 +178,6 @@ void Salarios::on_actionGuardar_triggered()
         // Mensaje de error
         QMessageBox::warning(this,"Guardar archivo","Nose puede acceder al archivo para guardar los datos");
     }
-}
 
-
-void Salarios::on_actionAcerca_de_Salarios_triggered()
-{
-    // Crear un objeto del cuadro de dialogo
-    Acerca *dialog = new Acerca(this);
-    // Enviar datos a la otra ventana
-    dialog->setVersion(VERSION);
-    //Mostrar la ventana en modo MODAL
-    dialog->exec();
-    // Luego de cerrar de la ventana, se acceden a los datos de la misma
-    qDebug() << dialog->valor();
 }
 
