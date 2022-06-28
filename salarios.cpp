@@ -98,6 +98,7 @@ void Salarios::on_actionSalir_triggered()
 
     if(reply == QMessageBox::Save){
         on_actionGuardar_triggered();
+        QApplication::quit();
     }
 
     if(reply == QMessageBox::Cancel){
@@ -113,7 +114,6 @@ void Salarios::on_actionSalir_triggered()
 
 void Salarios::on_actionGuardar_triggered()
 {
-
 
     QString nombreArchivo;
     QFile archivo(nombreArchivo);
